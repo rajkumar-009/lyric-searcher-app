@@ -1,3 +1,4 @@
+// Tracks component to update tracklist
 import React, { Component } from "react";
 import { Consumer } from "../../context";
 import Spinner from "../layout/Spinner";
