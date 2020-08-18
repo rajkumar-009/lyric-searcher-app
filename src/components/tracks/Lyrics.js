@@ -23,7 +23,7 @@ class Lyrics extends Component {
             `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?commontrack_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MX_KEY}`
           )
           .then((res) => {
-            console.log(res.data);
+            //console.log(res.data);
             this.setState({ track: res.data.message.body.track });
           });
       })
@@ -42,7 +42,7 @@ class Lyrics extends Component {
     } else {
       return (
         <React.Fragment>
-          <Link to="/" className="btn btn-dark btn-sm mb-4">
+          <Link to="/" className="btn btn-primary btn-sm mb-4">
             Go Back
           </Link>
           <div className="card">
@@ -57,15 +57,9 @@ class Lyrics extends Component {
 
           <ul className="list-group mt-3">
             <li className="list-group-item">
-              <strong>Album ID</strong>: {track.album_id}
+              <strong>Album Name</strong>: {track.album_name}
             </li>
-            <li className="list-group-item">
-              <strong>Song Genre</strong>:{" "}
-              {
-                track.primary_genres.music_genre_list[0].music_genre
-                  .music_genre_name
-              }
-            </li>
+
             <li className="list-group-item">
               <strong>Explicit</strong>: {track.explicit === 0 ? "No" : "Yes"}
             </li>
