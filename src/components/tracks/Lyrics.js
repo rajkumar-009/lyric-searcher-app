@@ -42,7 +42,10 @@ class Lyrics extends Component {
     } else {
       return (
         <React.Fragment>
-          <Link to="/" className="btn btn-primary btn-sm mb-4">
+          <Link
+            to="/lyric-searcher-app"
+            className="btn btn-primary btn-sm mb-4"
+          >
             Go Back
           </Link>
           <div className="card">
