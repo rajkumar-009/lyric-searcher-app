@@ -18,7 +18,11 @@ class App extends React.Component {
             <div className="container">
               <Switch>
                 {/*Switch to surround all routes */}
-                <Route exact path="/" component={Index} />
+                <Route
+                  exact
+                  path={["/", "/lyric-searcher-app"]}
+                  component={Index}
+                />
                 <Route exact path="/lyrics/track/:id" component={Lyrics} />
               </Switch>
             </div>
