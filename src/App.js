@@ -25,7 +25,10 @@ class App extends React.Component {
                 />
                 <Route
                   exact
-                  path="/lyric-searcher-app/lyrics/track/:id"
+                  path={[
+                    "/lyrics/track/:id",
+                    "/lyric-searcher-app/lyrics/track/:id",
+                  ]}
                   component={Lyrics}
                 />
               </Switch>

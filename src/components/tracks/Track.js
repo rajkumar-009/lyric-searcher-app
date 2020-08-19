@@ -23,7 +23,7 @@ const Track = (props) => {
             : {track.album_name}
           </p>
           <Link
-            to={`lyric-searcher-app/lyrics/track/${track.commontrack_id}`}
+            to={`lyrics/track/${track.commontrack_id}`}
             className="btn btn-secondary btn-block"
           >
             <i className="fas fa-chevron-right"></i>&nbsp;View Lyrics
